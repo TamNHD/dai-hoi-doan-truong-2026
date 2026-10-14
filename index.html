@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tài liệu Đại hội Đoàn trường 2026–2027</title>
+<meta name="description" content="Tài liệu Đại hội đại biểu Đoàn TNCS Hồ Chí Minh trường THPT Quế Phong nhiệm kỳ 2026 – 2027: Chương trình, Báo cáo Chính trị, Đề án nhân sự.">
+<meta name="theme-color" content="#f5f9ff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f9fe;
+    --surface:#ffffff;
+    --surface-2:#eef4fd;
+    --ink:#14213d;
+    --ink-2:#4a5878;
+    --ink-3:#8190ad;
+    --line:#e2e9f5;
+    --blue:#1d5fd1;
+    --blue-soft:#e3edfd;
+    --sky:#7fb2ff;
+    --red:#d83a3a;
+    --red-soft:#fdecec;
+    --gold:#e8a317;
+    --gold-soft:#fdf4e1;
+    --green:#1f9d6b;
+    --green-soft:#e3f6ee;
+    --radius:18px;
+    --shadow:0 1px 2px rgba(20,33,61,.04), 0 8px 24px -12px rgba(20,33,61,.12);
+    --shadow-lg:0 2px 4px rgba(20,33,61,.04), 0 24px 48px -20px rgba(29,95,209,.25);
+    --max:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  img,svg{display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+  @media (min-width:768px){.wrap{padding:0 28px}}
+
+  /* ---------- Header ---------- */
+  .top{
+    position:sticky;top:0;z-index:40;
+    background:rgba(246,249,254,.82);
+    backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);
+    border-bottom:1px solid transparent;transition:border-color .2s;
+  }
+  .top.scrolled{border-bottom-color:var(--line)}
+  .top .wrap{display:flex;align-items:center;gap:16px;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:-.01em;white-space:nowrap}
+  .brand-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--blue),#3f86f2);display:grid;place-items:center;box-shadow:0 6px 14px -6px rgba(29,95,209,.6)}
+  .brand small{display:block;font-weight:500;font-size:12px;color:var(--ink-3);line-height:1.2}
+  .brand span{line-height:1.2}
+  .nav{margin-left:auto;display:flex;gap:4px}
+  .nav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--ink-2);padding:8px 14px;border-radius:999px;transition:background .15s,color .15s}
+  .nav a:hover{background:var(--surface-2);color:var(--ink)}
+  .nav a.active{background:var(--blue-soft);color:var(--blue)}
+  @media (max-width:767px){
+    .top .wrap{height:56px}
+    .nav{display:none}
+    .brand small{display:none}
+  }
+  /* mobile bottom tab bar */
+  .tabbar{display:none}
+  @media (max-width:767px){
+    .tabbar{
+      display:grid;grid-template-columns:repeat(4,1fr);
+      position:fixed;left:0;right:0;bottom:0;z-index:40;
+      background:rgba(255,255,255,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      border-top:1px solid var(--line);
+      padding:6px 6px calc(6px + env(safe-area-inset-bottom));
+    }
+    .tabbar a{display:flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;font-size:11px;font-weight:500;color:var(--ink-3);padding:6px 0;border-radius:12px}
+    .tabbar a svg{width:22px;height:22px}
+    .tabbar a.active{color:var(--blue);background:var(--blue-soft)}
+    body{padding-bottom:76px}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;overflow:hidden;padding:56px 0 40px}
+  .hero::before{
+    content:"";position:absolute;inset:-40% -10% auto -10%;height:640px;z-index:-1;
+    background:
+      radial-gradient(closest-side at 22% 40%, rgba(127,178,255,.35), transparent 70%),
+      radial-gradient(closest-side at 78% 30%, rgba(255,196,120,.22), transparent 70%),
+      radial-gradient(closest-side at 60% 70%, rgba(216,58,58,.08), transparent 70%);
+  }
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--blue);background:var(--surface);border:1px solid var(--line);padding:6px 12px 6px 8px;border-radius:999px;box-shadow:var(--shadow)}
+  .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px var(--red-soft)}
+  .hero h1{
+    font-size:clamp(30px,6.2vw,58px);line-height:1.12;letter-spacing:-.03em;font-weight:800;
+    margin:20px 0 14px;max-width:16ch;text-wrap:balance;
+  }
+  .hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--blue),#4c8ff5);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lead{font-size:clamp(16px,2.2vw,19px);color:var(--ink-2);max-width:56ch;margin:0 0 28px}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+  .chip{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;background:var(--surface);border:1px solid var(--line);padding:8px 14px;border-radius:12px;color:var(--ink-2)}
+  .chip svg{width:16px;height:16px;color:var(--blue)}
+  .cta{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    font:inherit;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer;
+    padding:12px 20px;border-radius:12px;border:1px solid transparent;transition:transform .15s,box-shadow .15s,background .15s;
+  }
+  .btn svg{width:18px;height:18px}
+  .btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 20px -10px rgba(29,95,209,.8)}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 24px -10px rgba(29,95,209,.8)}
+  .btn-ghost{background:var(--surface);border-color:var(--line);color:var(--ink)}
+  .btn-ghost:hover{background:var(--surface-2)}
+  .btn-sm{padding:9px 14px;font-size:14px;border-radius:10px}
+
+  .countdown{
+    margin-top:36px;display:inline-flex;align-items:center;gap:14px;
+    background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 18px 12px 12px;box-shadow:var(--shadow)
+  }
+  .countdown .num{min-width:52px;height:52px;padding:0 8px;border-radius:12px;background:var(--gold-soft);color:#a86d00;display:grid;place-items:center;font-weight:800;font-size:22px;font-variant-numeric:tabular-nums}
+  .countdown .txt{font-size:14px;color:var(--ink-2);line-height:1.4}
+  .countdown .txt b{color:var(--ink);display:block;font-size:15px}
+  @media (max-width:767px){.hero{padding:36px 0 24px}.cta .btn{flex:1}}
+
+  /* ---------- Sections ---------- */
+  section.block{padding:56px 0;scroll-margin-top:64px}
+  @media (max-width:767px){section.block{padding:40px 0;scroll-margin-top:56px}}
+  .sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-bottom:28px}
+  .sec-kicker{font-size:13px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+  .sec-head h2{font-size:clamp(24px,3.6vw,34px);line-height:1.2;letter-spacing:-.02em;margin:0;font-weight:800;text-wrap:balance}
+  .sec-head p{margin:6px 0 0;color:var(--ink-2);max-width:60ch}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+  /* ---------- Documents ---------- */
+  .docs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:960px){.docs{grid-template-columns:1fr}}
+  .doc{padding:22px;display:flex;flex-direction:column;gap:16px;transition:transform .2s,box-shadow .2s}
+  .doc:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+  .doc-top{display:flex;gap:14px;align-items:flex-start}
+  .doc-icon{flex:none;width:52px;height:64px;border-radius:10px;position:relative;display:grid;place-items:end center;padding-bottom:8px;font-size:11px;font-weight:700;letter-spacing:.04em;color:#fff}
+  .doc-icon::after{content:"";position:absolute;top:0;right:0;width:16px;height:16px;background:rgba(255,255,255,.45);border-bottom-left-radius:8px}
+  .doc-icon .n{position:absolute;top:12px;left:0;right:0;text-align:center;font-size:22px;font-weight:800}
+  .doc[data-tone="blue"] .doc-icon{background:linear-gradient(160deg,#3f86f2,var(--blue))}
+  .doc[data-tone="red"] .doc-icon{background:linear-gradient(160deg,#ef6464,var(--red))}
+  .doc[data-tone="gold"] .doc-icon{background:linear-gradient(160deg,#f3bd4a,#d68f00)}
+  .doc h3{margin:0 0 4px;font-size:18px;line-height:1.35;letter-spacing:-.01em}
+  .doc .sub{font-size:14px;color:var(--ink-2);margin:0}
+  .doc .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:12px;font-weight:500;color:var(--ink-2);background:var(--surface-2);padding:4px 10px;border-radius:999px}
+  .tag.draft{background:var(--gold-soft);color:#9a6400}
+  .doc .actions{display:flex;gap:8px;margin-top:auto}
+  .doc .actions .btn{flex:1}
+
+  /* ---------- Program ---------- */
+  .seg{display:inline-flex;background:var(--surface-2);border-radius:14px;padding:4px;gap:4px}
+  .seg button{font:inherit;font-size:14px;font-weight:600;border:0;background:transparent;color:var(--ink-2);padding:9px 16px;border-radius:10px;cursor:pointer;white-space:nowrap}
+  .seg button[aria-selected="true"]{background:var(--surface);color:var(--blue);box-shadow:var(--shadow)}
+  @media (max-width:767px){.seg{display:flex;width:100%}.seg button{flex:1;padding:9px 8px}}
+  .session{display:none}
+  .session.show{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .session-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:18px 22px;border-bottom:1px solid var(--line)}
+  .session-head h3{margin:0;font-size:17px}
+  .session-head .when{font-size:14px;color:var(--ink-2);display:flex;align-items:center;gap:6px}
+  .session-head .when svg{width:16px;height:16px;color:var(--blue)}
+  ol.agenda{list-style:none;margin:0;padding:8px 0;counter-reset:a}
+  ol.agenda li{position:relative;display:flex;gap:16px;padding:12px 22px;counter-increment:a}
+  ol.agenda li::before{
+    content:counter(a);flex:none;width:30px;height:30px;border-radius:50%;
+    display:grid;place-items:center;font-size:13px;font-weight:700;
+    background:var(--blue-soft);color:var(--blue);position:relative;z-index:1;
+  }
+  ol.agenda li:not(:last-child)::after{content:"";position:absolute;left:36px;top:42px;bottom:-12px;width:2px;background:var(--line)}
+  ol.agenda li span{padding-top:3px}
+  ol.agenda li.key::before{background:var(--blue);color:#fff}
+  ol.agenda li.key span{font-weight:600}
+  ol.agenda li i{color:var(--ink-3)}
+  @media (max-width:767px){ol.agenda li{padding:10px 16px;gap:12px}ol.agenda li:not(:last-child)::after{left:30px}.session-head{padding:16px}}
+
+  /* ---------- Report ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+  @media (max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .stat{padding:18px 18px 16px}
+  .stat .v{font-size:clamp(26px,4vw,34px);font-weight:800;letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums}
+  .stat .l{font-size:14px;color:var(--ink-2);margin-top:6px;line-height:1.4}
+  .stat:nth-child(1) .v{color:var(--blue)}
+  .stat:nth-child(2) .v{color:var(--red)}
+  .stat:nth-child(3) .v{color:#c27f00}
+  .stat:nth-child(4) .v{color:var(--green)}
+
+  .quote{
+    position:relative;padding:28px 28px 28px 30px;margin:0 0 22px;border-radius:var(--radius);
+    background:linear-gradient(135deg,#1d5fd1,#3a7fe9);color:#fff;box-shadow:var(--shadow-lg);overflow:hidden
+  }
+  .quote::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.08)}
+  .quote .k{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin:0 0 10px}
+  .quote p{margin:0;font-size:clamp(16px,2.1vw,19px);line-height:1.6;font-weight:500;position:relative;z-index:1}
+  @media (max-width:767px){.quote{padding:22px 20px}}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media (max-width:860px){.grid-2{grid-template-columns:1fr}}
+
+  details.acc{border-bottom:1px solid var(--line)}
+  details.acc:last-child{border-bottom:0}
+  details.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:16px 20px;font-weight:600}
+  details.acc summary::-webkit-details-marker{display:none}
+  details.acc summary .ic{flex:none;width:38px;height:38px;border-radius:11px;display:grid;place-items:center}
+  details.acc summary .ic svg{width:20px;height:20px}
+  details.acc summary .chev{margin-left:auto;width:20px;height:20px;color:var(--ink-3);transition:transform .2s}
+  details.acc[open] summary .chev{transform:rotate(180deg)}
+  details.acc .body{padding:0 20px 18px 72px;color:var(--ink-2);font-size:15px}
+  details.acc .body ul{margin:0;padding-left:18px}
+  details.acc .body li{margin:4px 0}
+  details.acc .body b{color:var(--ink)}
+  @media (max-width:767px){details.acc summary{padding:14px 16px}details.acc .body{padding:0 16px 16px 16px}}
+  .ic.blue{background:var(--blue-soft);color:var(--blue)}
+  .ic.red{background:var(--red-soft);color:var(--red)}
+  .ic.gold{background:var(--gold-soft);color:#b77800}
+  .ic.green{background:var(--green-soft);color:var(--green)}
+
+  .panel{padding:22px}
+  .panel h3{margin:0 0 14px;font-size:17px;display:flex;align-items:center;gap:10px}
+  .panel h3 .ic{width:32px;height:32px;border-radius:9px;display:grid;place-items:center}
+  .panel h3 .ic svg{width:18px;height:18px}
+  .targets{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  .targets li{display:flex;gap:12px;align-items:baseline;font-size:15px;color:var(--ink-2)}
+  .targets li b{flex:none;min-width:64px;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums}
+  .lessons{counter-reset:l;list-style:none;margin:0;padding:0;display:grid;gap:12px}
+  .lessons li{counter-increment:l;display:flex;gap:12px;font-size:15px;color:var(--ink-2)}
+  .lessons li::before{content:counter(l);flex:none;width:26px;height:26px;border-radius:8px;background:var(--gold-soft);color:#a86d00;font-weight:700;font-size:13px;display:grid;place-items:center;margin-top:1px}
+  .sub-title{font-size:15px;font-weight:700;margin:26px 0 12px;color:var(--ink)}
+
+  /* ---------- Personnel ---------- */
+  .big-two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+  @media (max-width:560px){.big-two{gap:12px}}
+  .big{padding:24px;display:flex;align-items:center;gap:18px}
+  .big .n{font-size:clamp(44px,8vw,68px);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--blue)}
+  .big:nth-child(2) .n{color:var(--red)}
+  .big .t{font-size:15px;color:var(--ink-2);line-height:1.4}
+  .big .t b{display:block;color:var(--ink);font-size:16px}
+  @media (max-width:560px){.big{flex-direction:column;align-items:flex-start;gap:8px;padding:18px}}
+
+  .bar{display:flex;height:16px;border-radius:999px;overflow:hidden;gap:3px;margin:6px 0 18px}
+  .bar span{display:block;height:100%}
+  .legend{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
+  @media (max-width:560px){.legend{grid-template-columns:1fr}}
+  .legend div{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink-2)}
+  .legend i{flex:none;width:12px;height:12px;border-radius:4px;margin-top:5px}
+  .legend b{color:var(--ink);font-size:15px}
+  .legend small{display:block;color:var(--ink-3);font-size:13px}
+
+  .mini{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  @media (max-width:860px){.mini{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:420px){.mini{grid-template-columns:repeat(2,1fr)}}
+  .mini div{background:var(--surface-2);border-radius:14px;padding:14px 12px;text-align:center}
+  .mini b{display:block;font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+  .mini span{font-size:13px;color:var(--ink-2);line-height:1.35;display:block}
+
+  .roles{display:grid;gap:10px}
+  .role{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--surface-2);border-radius:12px;font-size:15px}
+  .role .badge{flex:none;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--blue);color:#fff}
+  .role .badge.alt{background:#fff;color:var(--blue);border:1px solid #c9dafa}
+
+  .std{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:12px}
+  .std li{counter-increment:s;display:flex;gap:12px;font-size:15px;color:var(--ink-2)}
+  .std li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--blue-soft);color:var(--blue);font-weight:700;font-size:13px;display:grid;place-items:center;margin-top:1px}
+
+  /* ---------- Footer ---------- */
+  footer{padding:40px 0 48px;border-top:1px solid var(--line);margin-top:24px;color:var(--ink-3);font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+  footer b{color:var(--ink-2)}
+
+  /* ---------- PDF viewer ---------- */
+  .viewer{position:fixed;inset:0;z-index:100;display:none;background:rgba(15,25,50,.45);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);padding:24px}
+  .viewer.open{display:flex;animation:fade .2s ease}
+  .viewer .box{margin:auto;width:min(1000px,100%);height:min(92vh,1100px);background:var(--surface);border-radius:18px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.4)}
+  .viewer .bar-top{display:flex;align-items:center;gap:10px;padding:12px 14px 12px 20px;border-bottom:1px solid var(--line)}
+  .viewer .bar-top h4{margin:0;font-size:15px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .viewer iframe{flex:1;border:0;width:100%;background:#525659}
+  .icon-btn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer;color:var(--ink-2);text-decoration:none}
+  .icon-btn:hover{background:var(--surface-2)}
+  .icon-btn svg{width:18px;height:18px}
+
+  /* ---------- Reveal ---------- */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    *{animation:none!important}
+  }
+  :focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:8px}
+</style>
+</head>
+<body>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.8 6.1 6.7.7-5 4.5 1.4 6.6L12 17l-5.9 3.4 1.4-6.6-5-4.5 6.7-.7z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M8 2.5v4M16 2.5v4M3 10h18"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 20a6.5 6.5 0 0 0-3-5.5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2.5H7a2.5 2.5 0 0 0-2.5 2.5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z"/><path d="M14 2.5V8h5.5M9 13h6M9 17h4"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v12M7 10.5l5 5 5-5M4.5 20.5h15"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 3 19V7.5A1.5 1.5 0 0 1 4.5 6H10"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-9.2-9.3C1.6 7.3 4 4 7.3 4c2 0 3.6 1.1 4.7 2.7C13.1 5.1 14.7 4 16.7 4 20 4 22.4 7.3 21.2 10.7 19.5 15.4 12 20 12 20z"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1.5"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21.5h4"/><path d="M12 2.5a6.5 6.5 0 0 0-4 11.6c.7.6 1 1.4 1 2.4h6c0-1 .3-1.8 1-2.4A6.5 6.5 0 0 0 12 2.5z"/></symbol>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#trang-chu" aria-label="Về đầu trang">
+      <span class="brand-mark"><svg width="18" height="18" style="color:#fff"><use href="#i-star"/></svg></span>
+      <span>Đại hội Đoàn trường<small>THPT Quế Phong · 2026 – 2027</small></span>
+    </a>
+    <nav class="nav" aria-label="Điều hướng">
+      <a href="#tai-lieu">Tài liệu</a>
+      <a href="#chuong-trinh">Chương trình</a>
+      <a href="#bao-cao">Báo cáo Chính trị</a>
+      <a href="#nhan-su">Đề án nhân sự</a>
+    </nav>
+  </div>
+</header>
+
+<main id="trang-chu">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>Đại hội đại biểu Đoàn TNCS Hồ Chí Minh</span>
+      <h1>Tài liệu Đại hội Đoàn trường <em>nhiệm kỳ 2026 – 2027</em></h1>
+      <p class="lead">Trường THPT Quế Phong. Toàn bộ tài liệu trình Đại hội ở một nơi: chương trình làm việc, Báo cáo Chính trị và Đề án nhân sự Ban Chấp hành.</p>
+      <div class="meta-row">
+        <span class="chip"><svg><use href="#i-cal"/></svg>Chiều 19 & 20/10/2026</span>
+        <span class="chip"><svg><use href="#i-pin"/></svg>Hội trường trường THPT Quế Phong</span>
+        <span class="chip"><svg><use href="#i-file"/></svg>3 tài liệu</span>
+      </div>
+      <div class="cta">
+        <a class="btn btn-primary" href="#tai-lieu"><svg><use href="#i-book"/></svg>Xem tài liệu</a>
+        <a class="btn btn-ghost" href="#chuong-trinh"><svg><use href="#i-list"/></svg>Chương trình</a>
+      </div>
+      <div class="countdown" id="countdown" hidden>
+        <div class="num" id="cd-num">–</div>
+        <div class="txt" id="cd-txt"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOCUMENTS ===== -->
+  <section class="block" id="tai-lieu" style="padding-top:24px">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-kicker">Tài liệu Đại hội</p>
+          <h2>Đọc trực tuyến hoặc tải về</h2>
+        </div>
+      </div>
+      <div class="docs">
+        <article class="card doc reveal" data-tone="blue">
+          <div class="doc-top">
+            <div class="doc-icon"><span class="n">1</span>PDF</div>
+            <div>
+              <h3>Chương trình Đại hội</h3>
+              <p class="sub">Trình tự làm việc hai phiên, chiều 19 và 20/10/2026.</p>
+            </div>
+          </div>
+          <div class="tags"><span class="tag">2 trang</span><span class="tag">20/10/2026</span></div>
+          <div class="actions">
+            <button class="btn btn-primary btn-sm" data-view="docs/chuong-trinh-dai-hoi.pdf" data-title="Chương trình Đại hội"><svg><use href="#i-eye"/></svg>Xem</button>
+            <a class="btn btn-ghost btn-sm" href="docs/chuong-trinh-dai-hoi.pdf" download="1. Chuong trinh Dai hoi Doan truong.pdf"><svg><use href="#i-down"/></svg>Tải về</a>
+          </div>
+        </article>
+
+        <article class="card doc reveal" data-tone="red">
+          <div class="doc-top">
+            <div class="doc-icon"><span class="n">2</span>PDF</div>
+            <div>
+              <h3>Báo cáo Chính trị</h3>
+              <p class="sub">Kết quả nhiệm kỳ 2025 – 2026, mục tiêu và giải pháp nhiệm kỳ 2026 – 2027.</p>
+            </div>
+          </div>
+          <div class="tags"><span class="tag">19 trang</span><span class="tag">26/09/2026</span><span class="tag draft">Dự thảo</span></div>
+          <div class="actions">
+            <button class="btn btn-primary btn-sm" data-view="docs/bao-cao-chinh-tri-2025-2026.pdf" data-title="Báo cáo Chính trị"><svg><use href="#i-eye"/></svg>Xem</button>
+            <a class="btn btn-ghost btn-sm" href="docs/bao-cao-chinh-tri-2025-2026.pdf" download="2. Bao cao Chinh tri 2025-2026.pdf"><svg><use href="#i-down"/></svg>Tải về</a>
+          </div>
+        </article>
+
+        <article class="card doc reveal" data-tone="gold">
+          <div class="doc-top">
+            <div class="doc-icon"><span class="n">3</span>PDF</div>
+            <div>
+              <h3>Đề án nhân sự</h3>
+              <p class="sub">Số lượng, cơ cấu, tiêu chuẩn BCH và BTV Đoàn trường nhiệm kỳ 2026 – 2027.</p>
+            </div>
+          </div>
+          <div class="tags"><span class="tag">3 trang</span><span class="tag">28/09/2026</span><span class="tag draft">Dự thảo</span></div>
+          <div class="actions">
+            <button class="btn btn-primary btn-sm" data-view="docs/de-an-nhan-su-2026-2027.pdf" data-title="Đề án nhân sự"><svg><use href="#i-eye"/></svg>Xem</button>
+            <a class="btn btn-ghost btn-sm" href="docs/de-an-nhan-su-2026-2027.pdf" download="3. De an nhan su 2026-2027.pdf"><svg><use href="#i-down"/></svg>Tải về</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAM ===== -->
+  <section class="block" id="chuong-trinh">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-kicker">Chương trình</p>
+          <h2>Trình tự làm việc của Đại hội</h2>
+        </div>
+        <div class="seg" role="tablist" aria-label="Chọn phiên">
+          <button role="tab" aria-selected="true" aria-controls="phien-1" id="tab-1">Phiên thứ nhất · 19/10</button>
+          <button role="tab" aria-selected="false" aria-controls="phien-2" id="tab-2">Phiên thứ hai · 20/10</button>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="session show" id="phien-1" role="tabpanel" aria-labelledby="tab-1">
+          <div class="session-head">
+            <h3>Phiên thứ nhất</h3>
+            <span class="when"><svg><use href="#i-cal"/></svg>Buổi chiều, thứ Hai 19/10/2026</span>
+          </div>
+          <ol class="agenda">
+            <li><span>Đại biểu tập trung tại Hội trường, nhận tài liệu, ổn định tổ chức</span></li>
+            <li><span>Nghi thức <i>(Chào cờ, Quốc ca, Đoàn ca)</i></span></li>
+            <li><span>Thông qua chương trình; phổ biến nội quy Đại hội</span></li>
+            <li><span>Bầu Đoàn Chủ tịch Đại hội</span></li>
+            <li><span>Đoàn Chủ tịch giới thiệu Đoàn thư ký</span></li>
+            <li><span>Bầu Ban thẩm tra tư cách đại biểu</span></li>
+            <li class="key"><span>Khai mạc Đại hội phiên thứ nhất</span></li>
+            <li class="key"><span>Báo cáo kiểm điểm BCH Đoàn trường nhiệm kỳ 2025 – 2026</span></li>
+            <li><span>Báo cáo kết quả thẩm tra tư cách đại biểu</span></li>
+            <li><span>Bế mạc Đại hội phiên thứ nhất</span></li>
+          </ol>
+        </div>
+
+        <div class="session" id="phien-2" role="tabpanel" aria-labelledby="tab-2">
+          <div class="session-head">
+            <h3>Phiên thứ hai</h3>
+            <span class="when"><svg><use href="#i-cal"/></svg>Buổi chiều, thứ Ba 20/10/2026</span>
+          </div>
+          <ol class="agenda">
+            <li><span>Ổn định tổ chức</span></li>
+            <li><span>Nghi thức <i>(Chào cờ, Quốc ca, Đoàn ca)</i></span></li>
+            <li><span>Mời Đoàn Chủ tịch, Đoàn thư ký lên làm việc</span></li>
+            <li class="key"><span>Khai mạc Đại hội, giới thiệu đại biểu</span></li>
+            <li class="key"><span>Thông qua tóm tắt Báo cáo Chính trị của BCH Đoàn trường nhiệm kỳ 2025 – 2026 trình Đại hội nhiệm kỳ 2026 – 2027</span></li>
+            <li><span>Tham luận</span></li>
+            <li><span>Phát biểu của Chi ủy, BGH</span></li>
+            <li><span>Phát biểu của Thường trực Đoàn xã</span></li>
+            <li class="key"><span>Bầu BCH Đoàn trường THPT Quế Phong nhiệm kỳ 2026 – 2027</span></li>
+            <li><span>Đại hội giải lao tại chỗ</span></li>
+            <li class="key"><span>Công bố kết quả bầu BCH Đoàn trường nhiệm kỳ 2026 – 2027</span></li>
+            <li><span>Tặng quà BCH nhiệm kỳ 2025 – 2026 không tham gia BCH nhiệm kỳ 2026 – 2027</span></li>
+            <li class="key"><span>Thông qua Dự thảo Nghị quyết Đại hội và biểu quyết thông qua</span></li>
+            <li><span>Bế mạc Đại hội</span></li>
+            <li><span>Nghi thức bế mạc <i>(Chào cờ)</i></span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REPORT ===== -->
+  <section class="block" id="bao-cao">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-kicker">Báo cáo Chính trị</p>
+          <h2>Nhìn lại nhiệm kỳ 2025 – 2026</h2>
+          <p>Những con số và kết quả nổi bật của công tác Đoàn và phong trào thanh niên trường THPT Quế Phong.</p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="card stat reveal"><div class="v" data-count="1113">1113</div><div class="l">đoàn viên, cùng 795 thanh niên</div></div>
+        <div class="card stat reveal"><div class="v" data-count="576">576</div><div class="l">đoàn viên mới được kết nạp</div></div>
+        <div class="card stat reveal"><div class="v" data-count="29">29</div><div class="l">lượt giải học sinh giỏi cấp Tỉnh</div></div>
+        <div class="card stat reveal"><div class="v" data-count="45">45</div><div class="l">chi đoàn trực thuộc</div></div>
+      </div>
+
+      <div class="card reveal" style="margin-bottom:22px">
+        <details class="acc" open>
+          <summary><span class="ic blue"><svg><use href="#i-book"/></svg></span>Công tác giáo dục<svg class="chev"><use href="#i-chev"/></svg></summary>
+          <div class="body"><ul>
+            <li>Phát động phong trào <b>“Mỗi đoàn viên một việc làm theo lời Bác”</b>, “Chi đoàn làm theo lời Bác”; 100% ĐVTN giáo viên có bản đăng ký và bài thu hoạch.</li>
+            <li>Triển khai <b>8 bài học lý luận chính trị</b> cho ĐVTN; bảng tin tuổi trẻ theo chủ đề hàng tháng.</li>
+            <li>45 chi đoàn sinh hoạt chủ đề “Xây dựng tình bạn đẹp và nói không với bạo lực học đường”.</li>
+            <li>Phối hợp Công an xã tuyên truyền pháp luật về ATGT, quản lý pháo cho <b>hơn 2.000 học sinh</b>.</li>
+            <li>Hệ thống <b>45 cộng tác viên</b> nắm bắt tình hình tư tưởng, định hướng dư luận trên mạng xã hội.</li>
+          </ul></div>
+        </details>
+        <details class="acc">
+          <summary><span class="ic red"><svg><use href="#i-heart"/></svg></span>Phong trào tình nguyện &amp; bảo vệ Tổ quốc<svg class="chev"><use href="#i-chev"/></svg></summary>
+          <div class="body"><ul>
+            <li>CLB Thanh niên tình nguyện: “Ngày thứ 7 tình nguyện”, “Chủ nhật xanh”, phân loại rác tại 45 chi đoàn.</li>
+            <li><b>Tiếp sức mùa thi 2026</b>: hơn 20 tổ chức, cá nhân ủng hộ — 120 két nước, 20 thùng sữa, 300 suất cơm.</li>
+            <li>Chiến dịch <b>Hoa phượng đỏ</b>, mô hình “Trao gửi yêu thương” tặng sách vở cho học sinh khó khăn.</li>
+            <li>“Thắp lửa yêu thương 2026”: tặng 20 bì quần áo cho bà con bản Mường Hinh, xã Thông Thụ.</li>
+            <li>Thăm hỏi, tặng quà đơn vị kết nghĩa Đồn Biên phòng Hạnh Dịch nhân ngày 3/3.</li>
+          </ul></div>
+        </details>
+        <details class="acc">
+          <summary><span class="ic gold"><svg><use href="#i-compass"/></svg></span>Đồng hành với thanh niên<svg class="chev"><use href="#i-chev"/></svg></summary>
+          <div class="body"><ul>
+            <li>29 lượt giải HSG cấp Tỉnh; 02 giáo viên bồi dưỡng HSG đạt kết quả cao, 02 SKKN đạt giải cao.</li>
+            <li>“Tháng tự học tiếng Anh”: <b>98% ĐVTN</b> đăng ký, chi đoàn giáo viên 100%.</li>
+            <li>Tư vấn hướng nghiệp, “Ngày hội tư vấn hướng nghiệp, tuyển sinh và giới thiệu việc làm 2026” cho <b>hơn 1.900 ĐVTN</b>.</li>
+            <li>Hội chợ xuân Bính Ngọ 2026, giải bóng chuyền nam nữ chào mừng 95 năm thành lập Đoàn, Hội thi văn nghệ 20/11.</li>
+            <li>Duy trì CLB Tiếng Anh, Nhảy, Kịch – Phát thanh, Nghệ thuật, Tình nguyện, Hội họa.</li>
+          </ul></div>
+        </details>
+        <details class="acc">
+          <summary><span class="ic green"><svg><use href="#i-shield"/></svg></span>Xây dựng Đoàn vững mạnh, tham gia xây dựng Đảng<svg class="chev"><use href="#i-chev"/></svg></summary>
+          <div class="body"><ul>
+            <li>Kết nạp <b>576 đoàn viên mới</b> trong năm học 2025 – 2026.</li>
+            <li>Giới thiệu <b>58 đoàn viên ưu tú</b> học lớp cảm tình Đảng, <b>30 đoàn viên ưu tú</b> đề nghị cấp ủy xem xét kết nạp.</li>
+            <li>Xây dựng Đoàn cơ sở “3 chủ động”; họp BCH và BCH mở rộng hàng tháng.</li>
+            <li>Tập huấn nghiệp vụ cho BCH Đoàn trường và bí thư, phó bí thư 45 chi đoàn.</li>
+            <li><b>100% chỉ tiêu năm học</b> đều đạt hoặc vượt.</li>
+          </ul></div>
+        </details>
+      </div>
+
+      <figure class="quote reveal">
+        <p class="k">Phương hướng nhiệm kỳ 2026 – 2027</p>
+        <p>Đổi mới mạnh mẽ nội dung và phương thức hoạt động Đoàn; lấy đoàn viên, thanh niên làm trung tâm; lấy giáo dục, rèn luyện, học tập và sự trưởng thành của học sinh làm mục tiêu; phát huy tinh thần tiên phong, sáng tạo, tình nguyện của tuổi trẻ; xây dựng môi trường học đường an toàn, văn minh, nhân ái, số hóa và giàu bản sắc văn hóa.</p>
+      </figure>
+
+      <div class="grid-2">
+        <div class="card panel reveal">
+          <h3><span class="ic blue"><svg><use href="#i-target"/></svg></span>Một số chỉ tiêu nhiệm kỳ mới</h3>
+          <ul class="targets">
+            <li><b>≥ 500</b>thanh niên ưu tú được kết nạp vào Đoàn</li>
+            <li><b>≥ 40</b>đoàn viên ưu tú học lớp bồi dưỡng nhận thức về Đảng</li>
+            <li><b>≥ 25</b>đoàn viên ưu tú giới thiệu cho Đảng, ít nhất 15 được kết nạp</li>
+            <li><b>60%</b>đoàn viên xếp loại xuất sắc</li>
+            <li><b>≥ 30%</b>ĐVTN đề xuất được ý tưởng, sáng kiến</li>
+            <li><b>&gt; 99%</b>học sinh đỗ tốt nghiệp THPT</li>
+            <li><b>100%</b>cán bộ Đoàn trường, chi đoàn được tập huấn nghiệp vụ</li>
+          </ul>
+        </div>
+        <div class="card panel reveal">
+          <h3><span class="ic gold"><svg><use href="#i-bulb"/></svg></span>Bài học kinh nghiệm</h3>
+          <ol class="lessons">
+            <li>Hoạt động của BCH, Ban Thường vụ Đoàn trường phải bám sát sự lãnh đạo, chỉ đạo của Chi ủy và Ban Thường vụ Đoàn xã.</li>
+            <li>Mỗi đồng chí Ủy viên BCH, Ủy viên BTV phát huy vai trò, trách nhiệm; không ngừng học tập, rèn luyện, nêu cao tinh thần gương mẫu và ý thức tổ chức kỷ luật.</li>
+            <li>Tăng cường tập huấn kỹ năng cho cán bộ chi đoàn, đặc biệt các kỹ năng trong kỷ nguyên số.</li>
+          </ol>
+          <p class="sub-title">Nhiệm vụ trọng tâm</p>
+          <ul class="targets" style="gap:6px">
+            <li>· Giáo dục chính trị tư tưởng, đạo đức, lối sống</li>
+            <li>· Phong trào “Học sinh 3 tốt”, tuổi trẻ sáng tạo</li>
+            <li>· Đổi mới phong trào thanh niên tình nguyện</li>
+            <li>· Phát triển đoàn viên, nâng chất sinh hoạt chi đoàn</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PERSONNEL ===== -->
+  <section class="block" id="nhan-su">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-kicker">Đề án nhân sự</p>
+          <h2>Ban Chấp hành nhiệm kỳ 2026 – 2027</h2>
+          <p>Dự kiến số lượng, cơ cấu Ban Chấp hành và Ban Thường vụ Đoàn trường do BCH khóa 2025 – 2026 trình Đại hội.</p>
+        </div>
+      </div>
+
+      <div class="big-two">
+        <div class="card big reveal"><div class="n" data-count="17">17</div><div class="t"><b>Ủy viên BCH</b>Ban Chấp hành Đoàn trường</div></div>
+        <div class="card big reveal"><div class="n" data-count="7">07</div><div class="t"><b>Ủy viên BTV</b>Ban Thường vụ Đoàn trường</div></div>
+      </div>
+
+      <div class="grid-2" style="margin-bottom:18px">
+        <div class="card panel reveal">
+          <h3><span class="ic blue"><svg><use href="#i-chart"/></svg></span>Định hướng cơ cấu BCH</h3>
+          <div class="bar" role="img" aria-label="Chi đoàn giáo viên 6, khối 12: 3, khối 11: 3, khối 10: 5">
+            <span style="flex:6;background:var(--blue)"></span>
+            <span style="flex:3;background:var(--red)"></span>
+            <span style="flex:3;background:var(--gold)"></span>
+            <span style="flex:5;background:var(--green)"></span>
+          </div>
+          <div class="legend">
+            <div><i style="background:var(--blue)"></i><span><b>06</b> · Chi đoàn giáo viên</span></div>
+            <div><i style="background:var(--red)"></i><span><b>03</b> · Khối 12<small>12A3, 12A4, 12A7</small></span></div>
+            <div><i style="background:var(--gold)"></i><span><b>03</b> · Khối 11<small>11A1, 11A3, 11A4</small></span></div>
+            <div><i style="background:var(--green)"></i><span><b>05</b> · Khối 10<small>10A1, 10A2, 10A3, 10C1</small></span></div>
+          </div>
+        </div>
+        <div class="card panel reveal">
+          <h3><span class="ic red"><svg><use href="#i-star"/></svg></span>Ban Thường vụ &amp; chức danh</h3>
+          <div class="roles">
+            <div class="role"><span class="badge">Bí thư</span>01 đồng chí giáo viên chuyên trách</div>
+            <div class="role"><span class="badge alt">Phó Bí thư</span>01 đồng chí giáo viên</div>
+            <div class="role"><span class="badge alt">Phó Bí thư</span>01 đồng chí học sinh</div>
+          </div>
+          <p class="sub-title" style="margin-top:18px">Cơ cấu BTV</p>
+          <p style="margin:0;color:var(--ink-2);font-size:15px">07 đồng chí, trong đó Chi đoàn giáo viên cơ cấu 06 đồng chí.</p>
+        </div>
+      </div>
+
+      <div class="card panel reveal" style="margin-bottom:18px">
+        <h3><span class="ic gold"><svg><use href="#i-users"/></svg></span>Cơ cấu kết hợp</h3>
+        <div class="mini">
+          <div><b>09</b><span>Nam</span></div>
+          <div><b>08</b><span>Nữ</span></div>
+          <div><b>11</b><span>UVBCH khóa cũ</span></div>
+          <div><b>08</b><span>Dân tộc thiểu số</span></div>
+          <div><b>03</b><span>Đảng viên</span></div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <details class="acc">
+          <summary><span class="ic green"><svg><use href="#i-shield"/></svg></span>Tiêu chuẩn Ủy viên BCH Đoàn trường<svg class="chev"><use href="#i-chev"/></svg></summary>
+          <div class="body">
+            <ol class="std">
+              <li>Có bản lĩnh chính trị, đạo đức, lối sống, năng lực thực tiễn, kinh nghiệm công tác; am hiểu, gắn bó và có khả năng định hướng cho thanh niên.</li>
+              <li>Có khả năng cụ thể hóa nghị quyết của Đảng, nghị quyết Đại hội Đoàn cấp trên và cấp mình, gắn với thực tiễn trường học.</li>
+              <li>Nhiệt tình, năng động, sáng tạo, dám nghĩ, dám làm và dám chịu trách nhiệm.</li>
+              <li>Có kiến thức tổng hợp, năng lực công tác xã hội, khả năng vận động thanh niên, am hiểu tình hình địa phương, đơn vị.</li>
+              <li>Có uy tín, khả năng quy tụ, biết huy động các nguồn lực phục vụ hoạt động của tổ chức Đoàn.</li>
+              <li>Có thời gian tham gia các kỳ họp BCH, đóng góp ý kiến và tham gia hiệu quả các hoạt động của BCH.</li>
+            </ol>
+          </div>
+        </details>
+        <details class="acc">
+          <summary><span class="ic blue"><svg><use href="#i-list"/></svg></span>Yêu cầu lựa chọn nhân sự<svg class="chev"><use href="#i-chev"/></svg></summary>
+          <div class="body"><ul>
+            <li>Gồm những đồng chí tiêu biểu về phẩm chất chính trị, đạo đức, năng lực thực tiễn, có uy tín, có khả năng quy tụ, đoàn kết thanh niên.</li>
+            <li>Bảo đảm hợp lý giữa ủy viên tái cử và ủy viên mới; cán bộ chủ chốt, chuyên trách và kiêm nhiệm; các đối tượng, lĩnh vực.</li>
+            <li>Bảo đảm kế thừa và phát triển, ổn định đội ngũ cán bộ chủ chốt; cơ cấu hợp lý giữa các độ tuổi.</li>
+            <li>Tỷ lệ cán bộ nữ tham gia BCH <b>không dưới 15%</b>.</li>
+          </ul></div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>Đoàn TNCS Hồ Chí Minh trường THPT Quế Phong</b><br>Đại hội đại biểu nhiệm kỳ 2026 – 2027</span>
+    <span>Tài liệu do Ban Tổ chức Đại hội cung cấp</span>
+  </div>
+</footer>
+
+<!-- mobile tab bar -->
+<nav class="tabbar" aria-label="Điều hướng nhanh">
+  <a href="#tai-lieu"><svg><use href="#i-file"/></svg>Tài liệu</a>
+  <a href="#chuong-trinh"><svg><use href="#i-list"/></svg>Chương trình</a>
+  <a href="#bao-cao"><svg><use href="#i-chart"/></svg>Báo cáo</a>
+  <a href="#nhan-su"><svg><use href="#i-users"/></svg>Nhân sự</a>
+</nav>
+
+<!-- PDF viewer -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+  <div class="box">
+    <div class="bar-top">
+      <h4 id="viewer-title"></h4>
+      <a class="icon-btn" id="viewer-open" target="_blank" rel="noopener" title="Mở trong tab mới"><svg><use href="#i-ext"/></svg></a>
+      <a class="icon-btn" id="viewer-dl" download title="Tải về"><svg><use href="#i-down"/></svg></a>
+      <button class="icon-btn" id="viewer-close" title="Đóng"><svg><use href="#i-x"/></svg></button>
+    </div>
+    <iframe id="viewer-frame" title="Xem tài liệu"></iframe>
+  </div>
+</div>
+
+<script>
+(function(){
+  // Header border on scroll
+  var top = document.getElementById('top');
+  addEventListener('scroll', function(){ top.classList.toggle('scrolled', scrollY > 8); }, {passive:true});
+
+  // Countdown to Đại hội (19/10/2026, 13:30 local)
+  var start = new Date(2026, 9, 19, 13, 30), end = new Date(2026, 9, 20, 18, 0);
+  var cd = document.getElementById('countdown'), num = document.getElementById('cd-num'), txt = document.getElementById('cd-txt');
+  function tick(){
+    var now = new Date();
+    if (now < start){
+      var d = Math.ceil((new Date(2026,9,19) - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 864e5);
+      if (d <= 0){ num.textContent = 'Hôm nay'; num.style.fontSize = '13px'; txt.innerHTML = '<b>Đại hội khai mạc chiều nay</b>Phiên thứ nhất tại Hội trường'; }
+      else { num.textContent = d; txt.innerHTML = '<b>ngày nữa đến Đại hội</b>Khai mạc chiều 19/10/2026'; }
+    } else if (now <= end){
+      num.textContent = '●'; num.style.color = 'var(--red)';
+      txt.innerHTML = '<b>Đại hội đang diễn ra</b>Chiều 19 & 20/10/2026';
+    } else {
+      num.textContent = '✓'; num.style.background = 'var(--green-soft)'; num.style.color = 'var(--green)';
+      txt.innerHTML = '<b>Đại hội đã thành công tốt đẹp</b>Nhiệm kỳ 2026 – 2027';
+    }
+    cd.hidden = false;
+  }
+  tick();
+
+  // Program tabs
+  var tabs = document.querySelectorAll('.seg [role=tab]');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){
+        var on = x === t;
+        x.setAttribute('aria-selected', on);
+        document.getElementById(x.getAttribute('aria-controls')).classList.toggle('show', on);
+      });
+    });
+  });
+  // Show session 2 by default on 20/10
+  var today = new Date();
+  if (today.getFullYear() === 2026 && today.getMonth() === 9 && today.getDate() === 20) tabs[1].click();
+
+  // PDF viewer: modal on desktop, new tab on phones (mobile browsers render inline PDFs poorly)
+  var v = document.getElementById('viewer'), frame = document.getElementById('viewer-frame');
+  var isSmall = function(){ return matchMedia('(max-width: 767px), (pointer: coarse)').matches; };
+  document.querySelectorAll('[data-view]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var url = b.getAttribute('data-view');
+      if (isSmall()){ window.open(url, '_blank', 'noopener'); return; }
+      document.getElementById('viewer-title').textContent = b.getAttribute('data-title');
+      document.getElementById('viewer-open').href = url;
+      document.getElementById('viewer-dl').href = url;
+      frame.src = url + '#view=FitH';
+      v.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('viewer-close').focus();
+    });
+  });
+  function closeV(){ v.classList.remove('open'); frame.src = 'about:blank'; document.body.style.overflow = ''; }
+  document.getElementById('viewer-close').addEventListener('click', closeV);
+  v.addEventListener('click', function(e){ if (e.target === v) closeV(); });
+  addEventListener('keydown', function(e){ if (e.key === 'Escape' && v.classList.contains('open')) closeV(); });
+
+  // Active section highlight
+  var links = document.querySelectorAll('.nav a, .tabbar a');
+  var secs = ['tai-lieu','chuong-trinh','bao-cao','nhan-su'].map(function(id){ return document.getElementById(id); });
+  function spy(){
+    var y = scrollY + innerHeight * 0.35, cur = null;
+    secs.forEach(function(s){ if (s.offsetTop <= y) cur = s.id; });
+    links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
+  }
+  addEventListener('scroll', spy, {passive:true}); spy();
+
+  // Reveal + count-up
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function countUp(el){
+    var to = +el.getAttribute('data-count'), pad = el.textContent.charAt(0) === '0' ? el.textContent.length : 0, t0 = null;
+    function step(t){
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / 900, 1), val = Math.round(to * (1 - Math.pow(1 - p, 3)));
+      el.textContent = String(val).padStart(pad, '0');
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        e.target.querySelectorAll('[data-count]').forEach(countUp);
+        io.unobserve(e.target);
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
