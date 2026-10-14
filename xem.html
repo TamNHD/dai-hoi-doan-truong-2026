@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Xem tài liệu · Đại hội Đoàn trường 2026–2027</title>
+<meta name="theme-color" content="#0a4ea3">
+<link rel="icon" type="image/svg+xml" href="assets/logo-doan.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--doan:#0a4ea3;--doan-dark:#06336e;--gold:#ffcd29;--bg:#e9eef6;--ink-3:#6b7a96}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+  svg{display:block}
+  .bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:8px;padding:10px 12px;padding-top:calc(10px + env(safe-area-inset-top));background:var(--doan);color:#fff;box-shadow:0 4px 16px -8px rgba(0,0,0,.4)}
+  .bar h1{flex:1;margin:0;font-size:15px;font-weight:600;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bar h1 small{display:block;font-size:12px;font-weight:500;opacity:.75}
+  .ib{flex:none;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 10px;border-radius:10px;background:rgba(255,255,255,.14);color:#fff;text-decoration:none;font-size:14px;font-weight:600}
+  .ib:hover{background:rgba(255,255,255,.26)}
+  .ib svg{width:20px;height:20px}
+  .ib.dl{background:var(--gold);color:var(--doan-dark)}
+  @media (max-width:480px){.ib .t{display:none}}
+  #pages{max-width:900px;margin:0 auto;padding:16px 12px 40px;display:flex;flex-direction:column;gap:12px}
+  @media (max-width:600px){#pages{padding:10px 8px 32px;gap:8px}}
+  .page{position:relative;background:#fff;border-radius:4px;box-shadow:0 2px 10px -4px rgba(10,40,90,.25);overflow:hidden}
+  .page canvas{display:block;width:100%;height:auto}
+  .page .no{position:absolute;right:8px;bottom:8px;font-size:11px;font-weight:600;color:var(--ink-3);background:rgba(255,255,255,.9);padding:2px 8px;border-radius:999px}
+  .msg{text-align:center;color:var(--ink-3);font-size:15px;padding:60px 16px}
+  .msg a{color:var(--doan);font-weight:600}
+  .spin{width:34px;height:34px;margin:0 auto 14px;border:3px solid #cfdaeb;border-top-color:var(--doan);border-radius:50%;animation:s 0.8s linear infinite}
+  @keyframes s{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <a class="ib" href="./" aria-label="Quay lại"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg><span class="t">Quay lại</span></a>
+  <h1 id="title">Tài liệu<small id="sub">Đại hội Đoàn trường 2026 – 2027</small></h1>
+  <a class="ib dl" id="dl" href="#" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v12M7 10.5l5 5 5-5M4.5 20.5h15"/></svg><span class="t">Tải về</span></a>
+</header>
+
+<main id="pages"><div class="msg"><div class="spin"></div>Đang tải tài liệu…</div></main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(function(){
+  var DOCS = {
+    'chuong-trinh': {file:'docs/chuong-trinh-dai-hoi.pdf', title:'Chương trình Đại hội', name:'1. Chuong trinh Dai hoi Doan truong.pdf'},
+    'bao-cao':      {file:'docs/bao-cao-chinh-tri-2025-2026.pdf', title:'Báo cáo Chính trị', name:'2. Bao cao Chinh tri 2025-2026.pdf'},
+    'nhan-su':      {file:'docs/de-an-nhan-su-2026-2027.pdf', title:'Đề án nhân sự', name:'3. De an nhan su 2026-2027.pdf'}
+  };
+  var key = new URLSearchParams(location.search).get('doc');
+  var doc = DOCS[key], box = document.getElementById('pages');
+  if (!doc){ box.innerHTML = '<div class="msg">Không tìm thấy tài liệu. <a href="./">Về trang chủ</a></div>'; return; }
+
+  document.title = doc.title + ' · Đại hội Đoàn trường 2026–2027';
+  document.getElementById('title').firstChild.textContent = doc.title;
+  var dl = document.getElementById('dl'); dl.href = doc.file; dl.setAttribute('download', doc.name);
+
+  function fail(){
+    box.innerHTML = '<div class="msg">Không hiển thị được tài liệu trên trình duyệt này.<br><br><a href="' + doc.file + '">Mở file PDF</a></div>';
+  }
+  if (!window.pdfjsLib){ fail(); return; }
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+  var pdf, slots = [], rendered = {}, lastW = 0;
+
+  // Render one page at the slot's current width × device pixel ratio
+  function render(i){
+    var slot = slots[i], w = slot.clientWidth;
+    if (!w || rendered[i] === w) return;
+    rendered[i] = w;
+    pdf.getPage(i + 1).then(function(page){
+      var base = page.getViewport({scale:1});
+      var dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+      var vp = page.getViewport({scale: w / base.width * dpr});
+      var c = document.createElement('canvas');
+      c.width = Math.floor(vp.width); c.height = Math.floor(vp.height);
+      return page.render({canvasContext: c.getContext('2d'), viewport: vp}).promise.then(function(){
+        var old = slot.querySelector('canvas');
+        if (old) slot.replaceChild(c, old); else slot.insertBefore(c, slot.firstChild);
+        slot.style.aspectRatio = '';
+      });
+    });
+  }
+
+  pdfjsLib.getDocument(doc.file).promise.then(function(p){
+    pdf = p;
+    document.getElementById('sub').textContent = p.numPages + ' trang';
+    return p.getPage(1);
+  }).then(function(first){
+    var ratio = first.getViewport({scale:1});
+    box.innerHTML = '';
+    for (var i = 0; i < pdf.numPages; i++){
+      var d = document.createElement('div');
+      d.className = 'page';
+      d.style.aspectRatio = ratio.width + ' / ' + ratio.height; // placeholder size until rendered
+      d.innerHTML = '<span class="no">' + (i + 1) + ' / ' + pdf.numPages + '</span>';
+      d.dataset.i = i;
+      box.appendChild(d); slots.push(d);
+    }
+    lastW = box.clientWidth;
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) render(+e.target.dataset.i); });
+    }, {rootMargin:'800px 0px'});
+    slots.forEach(function(s){ io.observe(s); });
+
+    // Re-render visible pages when width changes (rotation, resize)
+    var t;
+    addEventListener('resize', function(){
+      clearTimeout(t);
+      t = setTimeout(function(){
+        if (box.clientWidth === lastW) return;
+        lastW = box.clientWidth;
+        slots.forEach(function(s, i){
+          var r = s.getBoundingClientRect();
+          if (r.bottom > -800 && r.top < innerHeight + 800) render(i); else delete rendered[i];
+        });
+      }, 250);
+    });
+  }).catch(fail);
+})();
+</script>
+</body>
+</html>

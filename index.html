@@ -104,16 +104,6 @@
   footer .bar i:nth-child(2){background:var(--red)}
   footer .bar i:nth-child(3){background:var(--gold)}
 
-  /* ---------- PDF viewer ---------- */
-  .viewer{position:fixed;inset:0;z-index:100;display:none;background:rgba(6,30,70,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);padding:24px}
-  .viewer.open{display:flex}
-  .viewer .box{margin:auto;width:min(1000px,100%);height:min(92vh,1100px);background:#fff;border-radius:18px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.45)}
-  .viewer .top{display:flex;align-items:center;gap:8px;padding:10px 12px 10px 20px;background:var(--doan);color:#fff}
-  .viewer h3{margin:0;font-size:15px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .viewer iframe{flex:1;border:0;width:100%;background:#525659}
-  .ibtn{width:36px;height:36px;border-radius:10px;border:0;background:rgba(255,255,255,.14);color:#fff;display:grid;place-items:center;cursor:pointer;text-decoration:none}
-  .ibtn:hover{background:rgba(255,255,255,.26)}
-  .ibtn svg{width:18px;height:18px}
   :focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:10px}
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -162,7 +152,7 @@
           <li><b>20/10</b><span>bầu BCH mới</span></li>
         </ul>
         <div class="actions">
-          <button class="btn btn-primary" data-view="docs/chuong-trinh-dai-hoi.pdf" data-title="Chương trình Đại hội"><svg><use href="#i-eye"/></svg>Xem</button>
+          <a class="btn btn-primary" href="xem.html?doc=chuong-trinh"><svg><use href="#i-eye"/></svg>Xem</a>
           <a class="btn btn-ghost" href="docs/chuong-trinh-dai-hoi.pdf" download="1. Chuong trinh Dai hoi Doan truong.pdf"><svg><use href="#i-down"/></svg>Tải về</a>
         </div>
       </div>
@@ -182,7 +172,7 @@
           <li><b>29</b><span>giải HSG Tỉnh</span></li>
         </ul>
         <div class="actions">
-          <button class="btn btn-primary" data-view="docs/bao-cao-chinh-tri-2025-2026.pdf" data-title="Báo cáo Chính trị"><svg><use href="#i-eye"/></svg>Xem</button>
+          <a class="btn btn-primary" href="xem.html?doc=bao-cao"><svg><use href="#i-eye"/></svg>Xem</a>
           <a class="btn btn-ghost" href="docs/bao-cao-chinh-tri-2025-2026.pdf" download="2. Bao cao Chinh tri 2025-2026.pdf"><svg><use href="#i-down"/></svg>Tải về</a>
         </div>
       </div>
@@ -202,7 +192,7 @@
           <li><b>08</b><span>đồng chí nữ</span></li>
         </ul>
         <div class="actions">
-          <button class="btn btn-primary" data-view="docs/de-an-nhan-su-2026-2027.pdf" data-title="Đề án nhân sự"><svg><use href="#i-eye"/></svg>Xem</button>
+          <a class="btn btn-primary" href="xem.html?doc=nhan-su"><svg><use href="#i-eye"/></svg>Xem</a>
           <a class="btn btn-ghost" href="docs/de-an-nhan-su-2026-2027.pdf" download="3. De an nhan su 2026-2027.pdf"><svg><use href="#i-down"/></svg>Tải về</a>
         </div>
       </div>
@@ -224,41 +214,6 @@
   <b>Ban Tổ chức Đại hội</b> · Đoàn TNCS Hồ Chí Minh trường THPT Quế Phong
 </footer>
 
-<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
-  <div class="box">
-    <div class="top">
-      <h3 id="viewer-title"></h3>
-      <a class="ibtn" id="viewer-open" target="_blank" rel="noopener" title="Mở tab mới"><svg><use href="#i-ext"/></svg></a>
-      <a class="ibtn" id="viewer-dl" download title="Tải về"><svg><use href="#i-down"/></svg></a>
-      <button class="ibtn" id="viewer-close" title="Đóng"><svg><use href="#i-x"/></svg></button>
-    </div>
-    <iframe id="viewer-frame" title="Xem tài liệu"></iframe>
-  </div>
-</div>
 
-<script>
-(function(){
-  // PDF viewer: modal on desktop, new tab on phones
-  var v = document.getElementById('viewer'), frame = document.getElementById('viewer-frame');
-  var small = function(){ return matchMedia('(max-width: 767px), (pointer: coarse)').matches; };
-  document.querySelectorAll('[data-view]').forEach(function(b){
-    b.addEventListener('click', function(){
-      var url = b.getAttribute('data-view');
-      if (small()) { window.open(url, '_blank', 'noopener'); return; }
-      document.getElementById('viewer-title').textContent = b.getAttribute('data-title');
-      document.getElementById('viewer-open').href = url;
-      document.getElementById('viewer-dl').href = url;
-      frame.src = url + '#view=FitH';
-      v.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      document.getElementById('viewer-close').focus();
-    });
-  });
-  function close(){ v.classList.remove('open'); frame.src = 'about:blank'; document.body.style.overflow = ''; }
-  document.getElementById('viewer-close').addEventListener('click', close);
-  v.addEventListener('click', function(e){ if (e.target === v) close(); });
-  addEventListener('keydown', function(e){ if (e.key === 'Escape' && v.classList.contains('open')) close(); });
-})();
-</script>
 </body>
 </html>
