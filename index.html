@@ -56,12 +56,7 @@
   .org small{display:block;font-weight:500;opacity:.8}
   .hero h1{margin:44px 0 10px;font-size:clamp(30px,6vw,56px);line-height:1.12;font-weight:800;letter-spacing:-.025em;max-width:15ch;text-wrap:balance}
   .hero h1 .y{color:var(--gold)}
-  .hero .lead{margin:0 0 26px;font-size:clamp(15px,2vw,18px);opacity:.88;max-width:52ch}
-  .chips{display:flex;flex-wrap:wrap;gap:8px}
-  .chip{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2)}
-  .chip svg{width:16px;height:16px;color:var(--gold)}
-  .chip.count{background:var(--gold);color:var(--doan-dark);border-color:var(--gold);font-weight:700}
-  .chip.count svg{color:var(--red)}
+  .hero .lead{margin:0;font-size:clamp(15px,2vw,18px);opacity:.88;max-width:52ch}
   @media (max-width:767px){.hero{padding:22px 0 104px}.hero h1{margin-top:34px}}
 
   /* ---------- Documents ---------- */
@@ -147,11 +142,6 @@
     </div>
     <h1>Tài liệu Đại hội Đoàn trường <span class="y">2026 – 2027</span></h1>
     <p class="lead">Đại hội đại biểu Đoàn TNCS Hồ Chí Minh trường THPT Quế Phong, nhiệm kỳ 2026 – 2027.</p>
-    <div class="chips">
-      <span class="chip"><svg><use href="#i-cal"/></svg>Chiều 19 & 20/10/2026</span>
-      <span class="chip"><svg><use href="#i-pin"/></svg>Hội trường nhà trường</span>
-      <span class="chip count" id="countdown" hidden><svg><use href="#i-clock"/></svg><span id="cd"></span></span>
-    </div>
   </div>
 </header>
 
@@ -248,15 +238,6 @@
 
 <script>
 (function(){
-  // Countdown chip
-  var now = new Date(), day = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  var d = Math.round((new Date(2026, 9, 19) - day) / 864e5), cd = document.getElementById('cd'), txt;
-  if (d > 0) txt = 'Còn ' + d + ' ngày';
-  else if (d >= -1) txt = 'Đại hội đang diễn ra';
-  else txt = 'Đại hội đã thành công';
-  cd.textContent = txt;
-  document.getElementById('countdown').hidden = false;
-
   // PDF viewer: modal on desktop, new tab on phones
   var v = document.getElementById('viewer'), frame = document.getElementById('viewer-frame');
   var small = function(){ return matchMedia('(max-width: 767px), (pointer: coarse)').matches; };
