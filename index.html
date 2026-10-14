@@ -6,6 +6,7 @@
 <title>Tài liệu Đại hội Đoàn trường 2026–2027</title>
 <meta name="description" content="Tài liệu Đại hội đại biểu Đoàn TNCS Hồ Chí Minh trường THPT Quế Phong nhiệm kỳ 2026 – 2027.">
 <meta name="theme-color" content="#0a4ea3">
+<link rel="icon" type="image/svg+xml" href="assets/logo-doan.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -49,9 +50,9 @@
   .hero .star-bg{position:absolute;right:-80px;top:40px;width:420px;height:420px;color:rgba(255,255,255,.06);pointer-events:none}
   @media (max-width:767px){.hero .star-bg{width:280px;height:280px;right:-90px;top:70px}}
   .hero .wrap{position:relative}
-  .org{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;letter-spacing:.02em;line-height:1.35;opacity:.95}
-  .org .mark{flex:none;width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 0 0 4px rgba(255,255,255,.18)}
-  .org .mark svg{width:24px;height:24px;color:var(--red)}
+  .org{display:flex;align-items:center;gap:14px;font-size:14px;font-weight:600;letter-spacing:.02em;line-height:1.35;opacity:.95}
+  .org .logo{flex:none;width:80px;height:auto;filter:drop-shadow(0 6px 14px rgba(0,0,0,.25))}
+  @media (max-width:767px){.org .logo{width:62px}}
   .org small{display:block;font-weight:500;opacity:.8}
   .hero h1{margin:44px 0 10px;font-size:clamp(30px,6vw,56px);line-height:1.12;font-weight:800;letter-spacing:-.025em;max-width:15ch;text-wrap:balance}
   .hero h1 .y{color:var(--gold)}
@@ -102,6 +103,7 @@
 
   footer{padding:36px 0 44px;text-align:center;font-size:13px;color:var(--ink-3)}
   footer b{color:var(--ink-2);font-weight:600}
+  footer .flogo{width:40px;height:auto;margin:0 auto 12px}
   footer .bar{display:flex;justify-content:center;gap:4px;margin-bottom:14px}
   footer .bar i{width:28px;height:4px;border-radius:2px;background:var(--doan)}
   footer .bar i:nth-child(2){background:var(--red)}
@@ -140,7 +142,7 @@
   <svg class="star-bg" aria-hidden="true"><use href="#i-star"/></svg>
   <div class="wrap">
     <div class="org">
-      <span class="mark"><svg><use href="#i-star"/></svg></span>
+      <img class="logo" src="assets/logo-doan.svg" alt="Huy hiệu Đoàn TNCS Hồ Chí Minh" width="64" height="72">
       <span>ĐOÀN TNCS HỒ CHÍ MINH<small>Trường THPT Quế Phong</small></span>
     </div>
     <h1>Tài liệu Đại hội Đoàn trường <span class="y">2026 – 2027</span></h1>
@@ -227,6 +229,7 @@
 </main>
 
 <footer>
+  <img class="flogo" src="assets/logo-doan.svg" alt="" width="40" height="45">
   <div class="bar"><i></i><i></i><i></i></div>
   <b>Ban Tổ chức Đại hội</b> · Đoàn TNCS Hồ Chí Minh trường THPT Quế Phong
 </footer>
