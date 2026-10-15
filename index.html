@@ -88,6 +88,25 @@
   .btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
   .btn-ghost:hover{background:var(--bg)}
 
+  /* ---------- Timeline ---------- */
+  .tl{margin:40px 0 0}
+  .tl h3{margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--doan)}
+  .days{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .day{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 22px 20px;background:linear-gradient(var(--doan),var(--doan)) top/100% 4px no-repeat,var(--surface)}
+  .day:nth-child(2){background:linear-gradient(var(--red),var(--red)) top/100% 4px no-repeat,var(--surface)}
+  .day .d{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+  .day .d b{font-size:26px;font-weight:800;letter-spacing:-.02em;color:var(--doan);line-height:1}
+  .day:nth-child(2) .d b{color:var(--red)}
+  .day .d span{font-size:13px;font-weight:600;color:var(--ink-2)}
+  .day ol{margin:0;padding:0;list-style:none;position:relative}
+  .day ol::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;background:var(--line)}
+  .day li{position:relative;padding:4px 0 4px 24px;font-size:14.5px;color:var(--ink)}
+  .day li::before{content:"";position:absolute;left:0;top:11px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--doan)}
+  .day:nth-child(2) li::before{border-color:var(--red)}
+  .day li.hl{font-weight:700}
+  .day li.hl::before{background:var(--gold);border-color:var(--gold)}
+  @media (max-width:767px){.tl{margin-top:28px}.days{grid-template-columns:1fr;gap:12px}.day{padding:18px}}
+
   /* ---------- Motto ---------- */
   .motto{margin:40px 0 0;padding:26px 24px;border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow);display:flex;gap:18px;align-items:flex-start}
   .motto .q{flex:none;width:44px;height:44px;border-radius:50%;background:var(--red);display:grid;place-items:center}
@@ -148,8 +167,8 @@
         <p class="sum">Trình tự làm việc hai phiên: phiên 1 kiểm điểm BCH khóa cũ, phiên 2 thảo luận Báo cáo Chính trị và bầu BCH mới.</p>
         <ul class="facts">
           <li><b>2</b><span>phiên làm việc</span></li>
-          <li><b>19/10</b><span>khai mạc phiên 1</span></li>
-          <li><b>20/10</b><span>bầu BCH mới</span></li>
+          <li><b>21/10</b><span>khai mạc phiên 1</span></li>
+          <li><b>22/10</b><span>bầu BCH mới</span></li>
         </ul>
         <div class="actions">
           <a class="btn btn-primary" href="xem.html?doc=chuong-trinh"><svg><use href="#i-eye"/></svg>Xem</a>
@@ -197,6 +216,30 @@
         </div>
       </div>
     </article>
+  </section>
+
+  <section class="tl" aria-label="Lịch trình Đại hội">
+    <h3>Lịch trình Đại hội</h3>
+    <div class="days">
+      <div class="day">
+        <div class="d"><b>21/10</b><span>Phiên thứ nhất · Buổi chiều</span></div>
+        <ol>
+          <li>Nghi thức, thông qua chương trình</li>
+          <li>Bầu Đoàn Chủ tịch, Ban thẩm tra tư cách</li>
+          <li class="hl">Kiểm điểm BCH nhiệm kỳ 2025 – 2026</li>
+          <li>Thẩm tra tư cách đại biểu, bế mạc phiên 1</li>
+        </ol>
+      </div>
+      <div class="day">
+        <div class="d"><b>22/10</b><span>Phiên thứ hai · Buổi chiều</span></div>
+        <ol>
+          <li>Khai mạc, giới thiệu đại biểu</li>
+          <li>Báo cáo Chính trị, tham luận, phát biểu chỉ đạo</li>
+          <li class="hl">Bầu BCH nhiệm kỳ 2026 – 2027</li>
+          <li>Thông qua Nghị quyết, bế mạc Đại hội</li>
+        </ol>
+      </div>
+    </div>
   </section>
 
   <aside class="motto">
